@@ -1,15 +1,14 @@
 import styled from 'styled-components';
-import Img from '../assets/logo-header.svg';
 
 const Logotipo = styled.div`
 
 `
 
-function Logo(){
+function Logo({img}){
     return(
         <>
             <Logotipo>
-                <img src={Img} alt='logo'/>
+                <img src={img} alt='logo'/>
             </Logotipo>
         </>
     )

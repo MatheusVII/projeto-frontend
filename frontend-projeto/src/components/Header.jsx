@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Logo from './Logo';
 import Carrinho from '../assets/mini-cart.svg'
+import LogoHeader from '../assets/logo-header.svg';
 
 const HeaderStyled = styled.header`
     height: 10rem;
@@ -100,7 +101,7 @@ function Header() {
         <>
             <HeaderStyled>
                 <ContainerTop>
-                    <Logo />
+                    <Logo img={LogoHeader   }/>
                     <Search>
                         <input type='search' placeholder='Buscar Produtos'/>
                     </Search>
