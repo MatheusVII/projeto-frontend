@@ -8,19 +8,27 @@ import Informations from './Informations';
 
 const Rodape = styled.footer`
     width:100%;
-    height:17rem;
     background:var(--dark-gray);
     padding: 1rem 3rem;
     color:var(--white);
     display: flex;
-    gap:5rem;
+    flex-direction:column;
+    position: relative;
+    margin-top:10rem;
 `
 
 const Container = styled.div`
     display:flex;
-    flex-direction:column;
+    align-items:center;
+    width:100%;
+    gap:5rem;
+`
+
+const Container2 = styled.div`
+    display:flex;
     align-items:center;
     width:18rem;
+    flex-direction:column;
 `
 
 const SocialMidias = styled.div`
@@ -35,22 +43,49 @@ const Infos = styled.ul`
     width:80%;
 `
 
+const Direitos = styled.div`
+    width:100%;
+    3rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    bottom: 0;
+    left:0;
+    margin-top:1rem;
+
+    & hr{
+        width:100%;
+    }
+`
+
 function Footer() {
+    const blog = [
+        {
+            text: "Blog sobre nos",
+            link: "/blog"
+        }
+    ]
     return (
         <>  
             <Rodape>
                 <Container>
-                    <Logo img={LogoFooter}/>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, id facilis nesciunt ipsam animi incidunt dolorem asperiores dolorum pariatur, deserunt, voluptate natus officia sint. Tempora aut nemo molestias possimus sint.</p>
-                    <SocialMidias>
-                        <a href="/"><img src={Instagram} alt="Instagram" /></a>
-                        <a href="/"><img src={Facebook} alt="Instagram" /></a>
-                        <a href="/"><img src={Twitter} alt="Instagram" /></a>
-                    </SocialMidias>
+                    <Container2>
+                        <Logo img={LogoFooter}/>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, id facilis nesciunt ipsam animi incidunt dolorem asperiores dolorum pariatur, deserunt, voluptate natus officia sint. Tempora aut nemo molestias possimus sint.</p>
+                        <SocialMidias>
+                            <a href="/"><img src={Instagram} alt="Instagram" /></a>
+                            <a href="/"><img src={Facebook} alt="Instagram" /></a>
+                            <a href="/"><img src={Twitter} alt="Instagram" /></a>
+                        </SocialMidias>
+                    </Container2>
+                    <Infos>
+                        <Informations title={"Sobre Nos"} informations={blog}/>
+                    </Infos>
                 </Container>
-                <Infos>
-                    <Informations />
-                </Infos>
+                <Direitos>
+                    <hr />
+                    <p>© 2024 Digital Store</p>
+                </Direitos>
             </Rodape>
         </>
     )

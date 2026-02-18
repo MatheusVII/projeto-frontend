@@ -19,19 +19,20 @@ const Info = styled.li`
     }
 `
 
-function Informations({title, informations}){
-    return(
-        <>
-            <Info>
-                <h2>{title}</h2>
+function Informations({ title, informations }) {
+  return (
+    <Info>
+      <h2>{title}</h2>
 
-                <div>
-                    <h4>Sobre nos Digital Store</h4>
-                    <a href="/">about</a>
-                </div>
-            </Info>
-        </>
-    )
+      {informations.map((info, index) => (
+        <div key={index}>
+          <h4>{info.text}</h4>
+          <a href="/">{info.link}</a>
+        </div>
+      ))}
+    </Info>
+  );
 }
+
 
 export default Informations;
