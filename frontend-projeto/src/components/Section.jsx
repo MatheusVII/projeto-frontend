@@ -7,8 +7,8 @@ const Section2 = styled.section`
 
     & .header{
         width: 100%;
-        display:grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        position:relative;
         align-items:center;
 
         & h2{
@@ -18,7 +18,7 @@ const Section2 = styled.section`
         }
 
         & .center{
-            text-align:right;
+            text-align:center;
         }
 
         & .left{
@@ -29,6 +29,9 @@ const Section2 = styled.section`
             text-align:right;
             color: var(--primary);
             font-size:18px;
+            position:absolute;
+            right:0;
+            top:22px;
         }
     }
 `
@@ -43,13 +46,11 @@ const Lista = styled.div`
 `
 
 function Section({title, titlePosition, link, children}){
-    const align = "center";
-    console.log(children);
     return(
         <Section2>
             <div className="header">
-                <h2 className={align}>Titulo</h2>
-                <a href="/">Link</a>
+                <h2 className={titlePosition || "left"}>{title}</h2>
+                <a href={link.href || ""}>{link.text || ""}</a>
             </div>
             <Lista>
                 {children}
