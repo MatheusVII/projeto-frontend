@@ -32,7 +32,6 @@ body{
   display: flex;
   flex-direction: column;
   margin-top:20rem;
-  overflow: hidden;
 }
 
 li{
