@@ -1,11 +1,10 @@
-import './App.css'
-import styled from 'styled-components';
-import Inicio from './pages/inicioPage';
+import './App.css';
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
   return (
     <>
-      <Inicio />
+      <AppRoutes />
     </>
   )
 }

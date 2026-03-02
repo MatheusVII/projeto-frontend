@@ -14,6 +14,7 @@ const HeaderStyled = styled.header`
     display:flex;
     flex-direction:column;
     justify-content:space-between;
+    z-index:9999;
 
 `
 

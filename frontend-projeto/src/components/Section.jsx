@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Section2 = styled.section`
     width:100%;
     padding: 1rem 8rem;
-    background: var(--light-gray-2);
+    margin-top:5rem;
 
     & .header{
         width: 100%;
@@ -50,7 +50,9 @@ function Section({title, titlePosition, link, children}){
         <Section2>
             <div className="header">
                 <h2 className={titlePosition || "left"}>{title}</h2>
-                <a href={link.href || ""}>{link.text || ""}</a>
+                {link && (
+                    <a href={link.href || ""}>{link.text || ""}</a>
+                )}
             </div>
             <Lista>
                 {children}
