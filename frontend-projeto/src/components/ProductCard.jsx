@@ -45,21 +45,40 @@ const Price = styled.div`
     }
 `
 
-function ProductCard({image, price, name, priceDiscout}){
-    return(
-        <Card>
-            <Image> 
-                <img src={image} alt={image} />
-            </Image>
-            <Title>
-                <h3>{name}</h3>
-            </Title>
-            <Price>
-                <h2 className="preco">{price}</h2>
-                <h2 className="desconto"><s>{priceDiscout}</s></h2>
-            </Price>
-        </Card>
-    )
+function ProductCard({ image, price, name, priceDiscount }) {
+
+  const formattedPrice = new Intl.NumberFormat('pt-BR', {
+    style: 'currency',
+    currency: 'BRL',
+  }).format(price);
+
+    const formattedDiscount = priceDiscount
+    ? new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        }).format(Number(priceDiscount))
+    : null;
+    
+
+
+  return (
+    <Card>
+      <Image>
+        <img src={image} alt={name} />
+      </Image>
+
+      <Title>
+        <h3>{name}</h3>
+      </Title>
+
+      <Price>
+        <h2 className="preco">{formattedPrice}</h2>
+        {formattedDiscount && (
+            <h2 className="desconto"><s>{formattedDiscount || ""}</s></h2>
+        )}
+      </Price>
+    </Card>
+  );
 }
 
 export default ProductCard;

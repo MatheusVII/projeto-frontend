@@ -42,7 +42,6 @@ const Lista = styled.div`
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin-top:2rem;
 `
 
 function Section({title, titlePosition, link, children}){

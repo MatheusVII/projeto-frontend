@@ -39,15 +39,48 @@ function HomePage(){
                     <ProductListing products={
                         [
                             {
-                            name: "Nome do produto",
+                            name: "Tenis original da nike",
                             image: "public/product-thumb-1.jpeg",
                             price: 200,
                             priceDiscount: 149.9
                             },
                             {
-                            name: "Nome do produto",
+                            name: "Tenis do mike tyson",
                             image: "public/product-thumb-2.jpeg",
                             price: 49.9
+                            },
+                            {
+                            name: "Sapato de couro de javali",
+                            image: "public/product-thumb-3.jpeg",
+                            price: 400,
+                            priceDiscount: 599.9
+                            },
+                            {
+                            name: "Sapato com sola de aço Inox",
+                            image: "public/product-thumb-4.jpeg",
+                            price: 149.99
+                            },
+                            {
+                            name: "Tenis com o chulé do cristiano ronaldo",
+                            image: "public/product-thumb-5.jpeg",
+                            price: 799.99,
+                            priceDiscount: 1299.99
+                            },
+                            {
+                            name: "Tenis com o tecido raro de dubai",
+                            image: "public/produc-image-3.jpeg",
+                            price: 1699.99
+                            },
+                            {
+                            name: "Sapato ortopedico para canto de unha",
+                            image: "public/produc-image-2.jpeg",
+                            price: 400,
+                            priceDiscount: 599.9
+                            },
+                            {
+                            name: "Tenis usado pelo matue e encontrado no lixo",
+                            image: "public/produc-image-1.jpeg",
+                            price: 399.99
                             }
                         ]
                     }/>

@@ -18,7 +18,7 @@ function ProductListing({products}){
         <ListaProdutos>
             <Lista>
                 {products.map((p, index) => (
-                    <ProductCard image={p.image} price={p.price} name={p.name} priceDiscout={p.priceDiscout}/>
+                    <ProductCard image={p.image} price={p.price} name={p.name} priceDiscount={p.priceDiscount}/>
                 ))}
             </Lista>
         </ListaProdutos>
