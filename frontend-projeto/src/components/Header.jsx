@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import Logo from './Logo';
 import Carrinho from '../assets/mini-cart.svg'
 import LogoHeader from '../assets/logo-header.svg';
+import { Link } from 'react-router-dom';
 
 const HeaderStyled = styled.header`
     height: 10rem;
@@ -118,8 +119,8 @@ function Header() {
                 </ContainerTop>
                 <ContainerBottom>
                     <Links>
-                        <a href='/'>Inicio</a>
-                        <a>Produtos</a>
+                        <Link to="/">Inicio</Link>
+                        <Link to="/produtos">Produtos</Link>
                         <a>Categorias</a>
                         <a>Meus Pedidos</a>
                     </Links>

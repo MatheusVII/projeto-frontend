@@ -13,12 +13,13 @@ const Lista = styled.ul`
     gap:3rem;
 `
 
-function ProductListing({products}){
+function ProductListing({products, width}){
+    console.log(products);
     return(
         <ListaProdutos>
             <Lista>
                 {products.map((p, index) => (
-                    <ProductCard image={p.image} price={p.price} name={p.name} priceDiscount={p.priceDiscount}/>
+                    <ProductCard image={p.image} price={p.price} name={p.name} priceDiscount={p.priceDiscount} width={width}/>
                 ))}
             </Lista>
         </ListaProdutos>

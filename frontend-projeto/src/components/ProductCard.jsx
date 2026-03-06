@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Card = styled.div`
-    width: calc(25% - 3rem);
+    width: calc(${props => props.$width || "25%"} - 3rem);
     padding:1rem;
     background: var(--light-gray-2);
     border-radius: 10px;
@@ -45,7 +45,7 @@ const Price = styled.div`
     }
 `
 
-function ProductCard({ image, price, name, priceDiscount }) {
+function ProductCard({ image, price, name, priceDiscount, width }) {
 
   const formattedPrice = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -62,7 +62,7 @@ function ProductCard({ image, price, name, priceDiscount }) {
 
 
   return (
-    <Card>
+    <Card $width={width}>
       <Image>
         <img src={image} alt={name} />
       </Image>

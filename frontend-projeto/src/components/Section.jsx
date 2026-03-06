@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 const Section2 = styled.section`
     width:100%;
-    padding: 1rem 8rem;
-    margin-top:5rem;
+    padding: 1rem 3rem;
 
     & .header{
         width: 100%;
