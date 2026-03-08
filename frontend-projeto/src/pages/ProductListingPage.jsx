@@ -10,13 +10,15 @@ const Produtos = styled.section`
     padding: 6rem 2rem 1rem 2rem;
     display: flex;
     justify-content: center;
-    gap: 3rem;
 
 `
 
 const Filters = styled.div`
     width: 308px;
     height: 100%;
+    padding: 10px;
+    background: var(--light-gray-3);
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -35,7 +37,7 @@ const PriceFilter = styled.div`
         height: 60px;
         font-size: 16px;
         color: var(--dark-gray-2);
-        padding: 5px;
+        padding: 5px 10px;
         cursor: pointer;
     }
 `
@@ -46,6 +48,10 @@ const CheckboxFilters = styled.div`
     & h4{
         font-size: 16px;
         margin: 0 0 10px 0;
+    }
+
+    & hr{
+        border-color: var(--light-gray-2);
     }
 `   
 
@@ -66,6 +72,23 @@ function ProductListingPage(){
 
                     <CheckboxFilters>
                         <h4>Filtrar por</h4>
+                        <hr />
+                        <FilterGroup title="Categoria" inputType="checkbox" options={
+                            [
+                                {"text": "Options 1", "value": "opt1"},
+                                {"text": "Options 2"},
+                                {"text": "Options 3", "value": "opt3"},
+                                {"text": "Options 4"}
+                            ]
+                        }/>
+                        <FilterGroup title="Categoria" inputType="checkbox" options={
+                            [
+                                {"text": "Options 1", "value": "opt1"},
+                                {"text": "Options 2"},
+                                {"text": "Options 3", "value": "opt3"},
+                                {"text": "Options 4"}
+                            ]
+                        }/>
                         <FilterGroup title="Categoria" inputType="checkbox" options={
                             [
                                 {"text": "Options 1", "value": "opt1"},
@@ -79,7 +102,7 @@ function ProductListingPage(){
                 </Filters>
 
                 <Section title="">
-                    <ProductListing  width="33%" products={
+                    <ProductListing  padding="0"  width="33%" products={
                         [
                             {
                             name: "Tenis original da nike",

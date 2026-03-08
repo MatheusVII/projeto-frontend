@@ -5,15 +5,11 @@ const Filters = styled.div`
     padding:1rem;  
     background-color: white;
     margin-bottom:10px;
+    border-radius: 5px;
 
     & h4{
         color: var(--dark-gray-2);
         font-size: 16px;
-    }
-
-    & hr{
-        border-color: var(--light-gray-2);
-        height: 1px;
     }
 `
 
@@ -45,7 +41,6 @@ function FilterGroup({title, inputType, options}){
     return(
         <Filters>
             <h4>{title}</h4>
-            <hr />
             <Inputs>
                 {options.map((opt, index) => (
                     <div className="input">

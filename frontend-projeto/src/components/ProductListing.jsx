@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard";
 
 const ListaProdutos = styled.section`
     width:100%;
-    padding:4rem 1rem 1rem 1rem;
+    padding: ${props => props.$padding || "4rem 1rem 1rem 1rem"};
 `
 
 const Lista = styled.ul`
@@ -13,10 +13,10 @@ const Lista = styled.ul`
     gap:3rem;
 `
 
-function ProductListing({products, width}){
+function ProductListing({products, width, padding}){
     console.log(products);
     return(
-        <ListaProdutos>
+        <ListaProdutos $padding={padding}>
             <Lista>
                 {products.map((p, index) => (
                     <ProductCard image={p.image} price={p.price} name={p.name} priceDiscount={p.priceDiscount} width={width}/>

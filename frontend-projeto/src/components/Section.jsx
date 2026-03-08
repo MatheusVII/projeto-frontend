@@ -43,9 +43,9 @@ const Lista = styled.div`
     gap: 2rem;
 `
 
-function Section({title, titlePosition, link, children}){
+function Section({title, titlePosition, link, children, padding}){
     return(
-        <Section2>
+        <Section2 $padding={padding}>
             <div className="header">
                 <h2 className={titlePosition || "left"}>{title}</h2>
                 {link && (
