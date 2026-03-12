@@ -20,9 +20,11 @@ const Images = styled.div`
 const Track = styled.div`
     display:flex;
     transition: transform 0.2s ease;
+    height: 100%;
 
     & img{
         width:100%;
+        height: 100%
         flex-shrink: 0;
         object-fit: cover;
     }
