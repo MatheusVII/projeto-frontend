@@ -120,7 +120,7 @@ function Header() {
                 <ContainerBottom>
                     <Links>
                         <Link to="/">Inicio</Link>
-                        <Link to="/produtos">Produtos</Link>
+                        <Link to="/produto">Produtos</Link>
                         <a>Categorias</a>
                         <a>Meus Pedidos</a>
                     </Links>
