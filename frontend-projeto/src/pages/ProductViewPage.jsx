@@ -8,6 +8,8 @@ import ProductListing from "../components/ProductListing";
 const View = styled.section`
     width: 100%;
     display: flex;
+    background: var(--light-gray-3);
+    padding: 2rem 0;
 `
 
 const Images = styled.div`

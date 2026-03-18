@@ -7,17 +7,16 @@ import styled from "styled-components";
 const Produtos = styled.section`
     width:100%;
     height:100%;
-    padding: 6rem 2rem 1rem 2rem;
+    padding: 0rem 2rem 1rem 2rem;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 
 `
 
 const Filters = styled.div`
-    width: 308px;
-    height: 100%;
+    width: 308px;a
     padding: 10px;
-    background: var(--light-gray-3);
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -81,7 +80,7 @@ function ProductListingPage(){
                                 {"text": "Options 4"}
                             ]
                         }/>
-                        <FilterGroup title="Categoria" inputType="checkbox" options={
+                        <FilterGroup title="Categoria" inputType="radio" options={
                             [
                                 {"text": "Options 1", "value": "opt1"},
                                 {"text": "Options 2"},
@@ -101,8 +100,8 @@ function ProductListingPage(){
 
                 </Filters>
 
-                <Section title="">
-                    <ProductListing  padding="0"  width="33%" products={
+                <Section>
+                    <ProductListing padding="0" width="33%" products={
                         [
                             {
                             name: "Tenis original da nike",

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Section2 = styled.section`
     width:100%;
-    padding: 1rem 3rem;
+    padding: ${props => !props.$title ? "" : "1rem 3rem"};
 
     & .header{
         width: 100%;
@@ -43,9 +43,9 @@ const Lista = styled.div`
     gap: 2rem;
 `
 
-function Section({title, titlePosition, link, children, padding}){
+function Section({title, titlePosition, link, children}){
     return(
-        <Section2 $padding={padding}>
+        <Section2 $title={title}>
             <div className="header">
                 <h2 className={titlePosition || "left"}>{title}</h2>
                 {link && (

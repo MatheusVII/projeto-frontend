@@ -1,11 +1,18 @@
 import styled from "styled-components";
 
-const Card = styled.div`
+const Card = styled.a`
     width: calc(${props => props.$width || "25%"} - 3rem);
     padding:1rem;
-    background: var(--light-gray-2);
+    background: var(--light-gray-3);
     border-radius: 10px;
-    border:solid 1px var(--dark-gray-3);
+    border:solid 1px var(--light-gray);
+    text-decoration: none;
+    box-shadow: var(--shadow);
+    transition: all 200ms ease;
+
+    &:hover{
+      transform: translateY(-10px);
+    } 
 `
 
 const Image = styled.div`
@@ -45,7 +52,7 @@ const Price = styled.div`
     }
 `
 
-function ProductCard({ image, price, name, priceDiscount, width }) {
+function ProductCard({ image, price, name, priceDiscount, width, index}) {
 
   const formattedPrice = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
@@ -62,7 +69,7 @@ function ProductCard({ image, price, name, priceDiscount, width }) {
 
 
   return (
-    <Card $width={width}>
+    <Card $width={width} href={"produto/" + index}>
       <Image>
         <img src={image} alt={name} />
       </Image>

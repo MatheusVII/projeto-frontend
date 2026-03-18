@@ -29,6 +29,7 @@ const Inputs = styled.div`
         & input{
             width: 22px;
             height: 22px;
+            cursor: pointer;
 
             &:checked{
                 accent-color: var(--primary);

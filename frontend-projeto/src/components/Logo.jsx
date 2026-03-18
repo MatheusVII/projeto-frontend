@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-const Logotipo = styled.div`
+const Logotipo = styled.a`
 
 `
 
 function Logo({img}){
     return(
         <>
-            <Logotipo>
+            <Logotipo href='/'>
                 <img src={img} alt='logo'/>
             </Logotipo>
         </>

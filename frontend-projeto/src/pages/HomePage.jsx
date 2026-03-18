@@ -14,6 +14,7 @@ const Colecoes = styled.div`
     & img{
         border-radius: 4px;
         width: calc(33% - 1rem); 
+        box-shadow: var(--shadow);
     }
 `
 

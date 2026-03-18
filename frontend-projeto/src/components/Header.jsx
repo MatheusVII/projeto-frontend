@@ -52,10 +52,15 @@ const BtnCadastrar = styled.div`
         height:3rem;
         border-radius:10px;
         font-size:16px;
-        color:var(--dark-gray-2);
+        color:var(--dark-gray-3);
         background: none;
         border:none;
         text-decoration:underline;
+        transition: all 200ms ease;
+
+        &:hover{
+            color: var(--light-gray);
+        }
     }
 `
 
@@ -69,6 +74,11 @@ const BtnLogin = styled.div`
         font-weight:bold;
         border:none;
         font-size:16px;
+        transition: all 200ms ease;
+
+        &:hover{
+            background: var(--primary-hover);
+        }
     }
 `
 

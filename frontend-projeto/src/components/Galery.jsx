@@ -15,6 +15,7 @@ const Images = styled.div`
     border-radius: ${props => props.$radius || '0px'};
     height: ${props => props.$height || 'auto'};
     position:relative;
+    box-shadow: var(--shadow);  
 `
 
 const Track = styled.div`
