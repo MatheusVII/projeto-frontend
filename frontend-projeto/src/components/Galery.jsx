@@ -7,6 +7,10 @@ const ImagesGalery = styled.section`
     width: ${props => props.$width || '100%'};
     position:relative;
     margin:auto;
+
+    @media (max-width: 480px) {
+        width:90%;
+    }
 `
 
 const Images = styled.div`
@@ -16,6 +20,10 @@ const Images = styled.div`
     height: ${props => props.$height || 'auto'};
     position:relative;
     box-shadow: var(--shadow);  
+
+    @media (max-width: 480px) {
+        height: 23rem;
+    }
 `
 
 const Track = styled.div`
@@ -25,7 +33,7 @@ const Track = styled.div`
 
     & img{
         width:100%;
-        height: 100%
+        height: 100%;
         flex-shrink: 0;
         object-fit: cover;
     }
@@ -65,8 +73,8 @@ const Thumbnails = styled.div`
     justify-content:center;
 
     & img{
-        width: 60px;
-        height: 60px;
+        width: 120px;
+        height: 120px;
         object-fit: cover;
         cursor: pointer;
         border: 2px solid transparent;

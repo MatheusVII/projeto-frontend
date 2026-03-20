@@ -6,16 +6,23 @@ const Info = styled.li`
     padding: 1rem 3rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: var(--dark-gray-2);
+    align-items: flex-start;
     border-radius: 10px;
+    gap: 2rem;
 
     & h2{   
-        margin: 0 0 1.5rem 0;
-        border-bottom: solid 2px var(--dark-gray-3);
+        margin: 0;
         width:100%;
         padding-bottom: 10px;
+    }
+
+    & a{
+      text-decoration: none;
+    }
+
+    @media (max-width: 480px) {
+      padding: 0;
+      width: calc(50% - 3rem);
     }
 `
 
@@ -26,8 +33,7 @@ function Informations({ title, informations }) {
 
       {informations.map((info, index) => (
         <div key={index}>
-          <h4>{info.text}</h4>
-          <a href="/">{info.link}</a>
+          <a href={info.link || null}>{info.text}</a>
         </div>
       ))}
     </Info>

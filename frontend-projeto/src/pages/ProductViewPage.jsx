@@ -9,7 +9,7 @@ const View = styled.section`
     width: 100%;
     display: flex;
     background: var(--light-gray-3);
-    padding: 2rem 0;
+    padding: 2rem 3rem;
 `
 
 const Images = styled.div`
@@ -21,7 +21,7 @@ function ProductViewPage() {
         <LayoutDefault>
             <View>
                 <Images>
-                    <Galery width="700px" height="570px" radius="4px" showthumbs={true} images={
+                    <Galery width={"75%"}radius="4px" showthumbs={true} images={
                         [
                             {"src": "../../public/produc-image-1.jpeg"},
                             {"src": "../../public/produc-image-2.jpeg"}
@@ -30,18 +30,18 @@ function ProductViewPage() {
                 </Images>
                 <BuyBox />
             </View>
-            <Section title={"Produtos Recomendados"} link={{"text": "Ver todos" ,"href": "/produto"}}>
-                <ProductListing products={
+            <Section title={"Produtos Relacionados"} link={{"text": "Ver todos" ,"href": "/produto"}}>
+                <ProductListing padding={"0"} products={
                       [
                         {
-                            name: "Nome do produto 1",
-                            image: "https://url.imagem/do/produto1.png",
+                            name: "Tenis original da nike",
+                            image: "../public/product-thumb-1.jpeg",
                             price: 200,
                             priceDiscount: 149.9
                         },
                         {
-                            name: "Nome do produto 2",
-                            image: "https://url.imagem/do/produto2.png",
+                            name: "Tenis do mike tyson",
+                            image: "../public/product-thumb-2.jpeg",
                             price: 49.9
                         }
                     ]

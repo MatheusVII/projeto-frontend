@@ -3,16 +3,23 @@ import styled from "styled-components";
 const Card = styled.a`
     width: calc(${props => props.$width || "25%"} - 3rem);
     padding:1rem;
-    background: var(--light-gray-3);
-    border-radius: 10px;
-    border:solid 1px var(--light-gray);
+    border-radius: 5px;
     text-decoration: none;
-    box-shadow: var(--shadow);
     transition: all 200ms ease;
+    border:solid 2px var(--background);
 
     &:hover{
       transform: translateY(-10px);
+      border-color: var(--light-gray-2);
+      box-shadow: var(--shadow);
     } 
+
+    @media (max-width: 480px) {
+      width: calc(50% - 10px);
+      padding: 0;
+      border-radius: 4px;
+      border: none;
+    }
 `
 
 const Image = styled.div`
@@ -26,14 +33,33 @@ const Image = styled.div`
         height:100%;
         border-radius: 10px;
     }
+
+    @media (max-width: 480px) {
+        height: 11rem;
+        & img{
+          border-radius: 4px;
+        }
+        
+    }
 `
 
 const Title = styled.div`
     width:100%;
+    margin-top: 2rem;
 
     & h3{
         margin:1rem 0 0 0;
+        color: var(--light-gray);
+        font-size:23px;
     }
+
+     @media (max-width: 480px) {
+        & h3{
+          font-size: 14px;
+        }
+
+        margin-top: 10px;
+    } 
 `
 
 const Price = styled.div`
@@ -49,6 +75,20 @@ const Price = styled.div`
     & .desconto{
         color: var(--light-gray);
         font-size:30px;
+    }
+
+    @media (max-width: 480px) {
+      gap:10px;
+
+      & .preco{
+        color: var(--dark-gray);
+        font-size:16px;
+      }
+
+      & .desconto{
+        color: var(--light-gray);
+        font-size:16px;
+      }
     }
 `
 

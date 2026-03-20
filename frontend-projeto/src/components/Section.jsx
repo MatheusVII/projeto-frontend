@@ -6,7 +6,7 @@ const Section2 = styled.section`
 
     & .header{
         width: 100%;
-        display: flex;
+        display: ${props => !props.$title ? "none" : "flex"};
         position:relative;
         align-items:center;
 
@@ -32,6 +32,10 @@ const Section2 = styled.section`
             right:0;
             top:22px;
         }
+    }
+
+    @media (max-width: 480px) {
+        padding: 10px
     }
 `
 

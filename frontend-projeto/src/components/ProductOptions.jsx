@@ -8,19 +8,24 @@ const Options = styled.div`
 `
 
 const Opt = styled.div`
-    width: ${props => props.$type === "color" ? "46px" : "auto"};
+    width: ${props => props.$type === "color" ? "46px" : "46px"};
     height: 46px;
     padding:5px;
     background:${props => props.$color || "var(--light-gray-3)"};
     display: flex;
+    justify-content: center;
     align-items: center;
-    border:solid 2px white;
+    border:solid 2px var(--background);
     border-radius: ${props => props.$radius || "0"};
     cursor: pointer;
-    transition: border 0.2s ease;   
+    transition: all 0.2s ease;   
+    font-weight: bold;
 
     &.active{
         border-color: var(--primary);
+        background: ${props => props.$color || "var(--primary)"};
+        color: white;
+        transform: scale(1.1);
     }
 `
 

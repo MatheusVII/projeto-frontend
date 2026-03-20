@@ -7,7 +7,7 @@ import styled from "styled-components";
 const Produtos = styled.section`
     width:100%;
     height:100%;
-    padding: 0rem 2rem 1rem 2rem;
+    padding: 0rem 6rem 1rem 6rem;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -15,24 +15,32 @@ const Produtos = styled.section`
 `
 
 const Filters = styled.div`
-    width: 308px;a
-    padding: 10px;
+    width: 500px;
+    padding: 1rem 2rem;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     justify-content: flex-start;
+    background: var(--white);
 `
 
 const PriceFilter = styled.div`
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10rem;
+    margin-bottom: 2rem;
+    align-items: flex-end;
 
     & h4{
         margin: 0 0 10px 0;
     }
 
     & select{
-        width: 100%;
+        width: 24rem;
+        border-radius: 4px;
+        background: none;
         height: 60px;
         font-size: 16px;
         color: var(--dark-gray-2);
@@ -45,55 +53,56 @@ const CheckboxFilters = styled.div`
     width: 100%;
 
     & h4{
-        font-size: 16px;
+        font-size: 18px;
         margin: 0 0 10px 0;
     }
 
     & hr{
-        border-color: var(--light-gray-2);
+        border-color: var(--light-gray-3);
     }
 `   
 
 function ProductListingPage(){
     return(
         <LayoutDefault>
+            <PriceFilter>
+                <div>
+                    <h4>Ordenar por</h4 >
+                    <select name="price" id="price">
+                        <option value="asc">Preço mais barato</option>
+                        <option value="desc">Preço mais caro</option>
+                    </select>
+                </div>
+
+            </PriceFilter>
             <Produtos>
 
                 <Filters>
 
-                    <PriceFilter>
-                        <h4>Ordenar por</h4 >
-                        <select name="price" id="price">
-                            <option value="asc">Preço mais barato</option>
-                            <option value="desc">Preço mais caro</option>
-                        </select>
-                    </PriceFilter>
-
                     <CheckboxFilters>
                         <h4>Filtrar por</h4>
                         <hr />
-                        <FilterGroup title="Categoria" inputType="checkbox" options={
+                        <FilterGroup title="Marca" inputType="checkbox" options={
                             [
-                                {"text": "Options 1", "value": "opt1"},
-                                {"text": "Options 2"},
-                                {"text": "Options 3", "value": "opt3"},
-                                {"text": "Options 4"}
-                            ]
-                        }/>
-                        <FilterGroup title="Categoria" inputType="radio" options={
-                            [
-                                {"text": "Options 1", "value": "opt1"},
-                                {"text": "Options 2"},
-                                {"text": "Options 3", "value": "opt3"},
-                                {"text": "Options 4"}
+                                {"text": "Adidas", "value": "addidas"},
+                                {"text": "Balenciaga"},
+                                {"text": "K-Swiss", "value": "opt3"},
+                                {"text": "Nike"},
+                                {"text" : "Puma"}
                             ]
                         }/>
                         <FilterGroup title="Categoria" inputType="checkbox" options={
                             [
-                                {"text": "Options 1", "value": "opt1"},
-                                {"text": "Options 2"},
-                                {"text": "Options 3", "value": "opt3"},
-                                {"text": "Options 4"}
+                                {"text": "Esporte e lazer", "value": "opt1"},
+                                {"text": "Casual"},
+                                {"text": "Utilitario", "value": "opt3"},
+                                {"text": "Corrida"}
+                            ]
+                        }/>
+                        <FilterGroup title="Estado" inputType="radio" options={
+                            [
+                                {"text": "Novo", "value": "opt1"},
+                                {"text": "Usado"},
                             ]
                         }/>
                     </CheckboxFilters>

@@ -4,11 +4,11 @@
   --secondary: #B5B6F2;
   --tertiary: #991956;
   --text: #d8d7ee;
-  --background: #d8d7ee;
+  --background: #d8d7ee44;
   --error: #EE4266;
   --warning: #F6AA1C;
   --warning-hover: #de9918;
-  --success: #52CA76;
+  --success: #ccff5f;
 
   --dark-gray: #1F1F1F;
   --dark-gray-2: #474747;
@@ -36,6 +36,7 @@ body{
   display: flex;
   flex-direction: column;
   margin-top:13rem;
+  background: var(--background);
 }
 
 li{

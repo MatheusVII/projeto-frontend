@@ -3,13 +3,12 @@ import styled from "styled-components";
 const Filters = styled.div`
     width: 100%;
     padding:1rem;  
-    background-color: white;
     margin-bottom:10px;
     border-radius: 5px;
 
     & h4{
         color: var(--dark-gray-2);
-        font-size: 16px;
+        font-size: 15px;
     }
 `
 
@@ -23,7 +22,7 @@ const Inputs = styled.div`
     & .input {
         width: 100%;
         display: flex;
-        gap: 10px;
+        gap: 4px;
         align-items: center;
 
         & input{

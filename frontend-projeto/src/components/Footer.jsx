@@ -9,7 +9,7 @@ import Informations from './Informations';
 const Rodape = styled.footer`
     width:100%;
     background:var(--dark-gray);
-    padding: 1rem 3rem;
+    padding: 1rem 1rem;
     color:var(--white);
     display: flex;
     flex-direction:column;
@@ -22,6 +22,11 @@ const Container = styled.div`
     align-items:center;
     width:100%;
     gap:5rem;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 `
 
 const Container2 = styled.div`
@@ -29,6 +34,10 @@ const Container2 = styled.div`
     align-items:center;
     width:18rem;
     flex-direction:column;
+
+    @media (max-width: 480px) {
+        align-items: flex-start;
+    }
 `
 
 const SocialMidias = styled.div`
@@ -41,11 +50,17 @@ const Infos = styled.ul`
     display:flex;
     gap:3rem;
     width:80%;
+
+    @media (max-width: 480px) {
+        padding: 0;
+        gap: 3rem;
+        flex-wrap: wrap;
+        width: 100%;
+    }
 `
 
 const Direitos = styled.div`
     width:100%;
-    3rem;
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -59,10 +74,62 @@ const Direitos = styled.div`
 `
 
 function Footer() {
-    const blog = [
+    const info = [
         {
-            text: "Blog sobre nos",
-            link: "/blog"
+            text: "Sobre drip store",
+            link: "/"
+        },
+        {
+            text: "Segurança",
+            link: "/"
+        },
+        {
+            text: "Whishlist",
+            link: "/"
+        },
+        {
+            text: "Blog",
+            link: "/"
+        },
+        {
+            text: "Trabalhe Conosco",
+            link: "/"
+        },
+        {
+            text: "Meus Pedidos",
+            link: "/"
+        },
+    ]
+
+    const categorias = [
+        {
+            text: "Camisetas",
+            link: "/"
+        },
+        {
+            text: "Calças",
+            link: "/"
+        },
+        {
+            text: "Bonés",
+            link: "/"
+        },
+        {
+            text: "Headphones",
+            link: "/"
+        },
+        {
+            text: "Tênis",
+            link: "/"
+        }
+    ]
+
+    const contato = [
+        {
+            text: "Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE, 60150-161"
+        },
+        {
+            text: "(85) 3051-3411"
         }
     ]
     return (
@@ -79,7 +146,9 @@ function Footer() {
                         </SocialMidias>
                     </Container2>
                     <Infos>
-                        <Informations title={"Sobre Nos"} informations={blog}/>
+                        <Informations title={"Informação"} informations={info}/>
+                        <Informations title={"Categorias"} informations={categorias}/>
+                        <Informations title={"Contato"} informations={contato}/>
                     </Infos>
                 </Container>
                 <Direitos>

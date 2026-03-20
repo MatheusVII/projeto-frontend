@@ -12,6 +12,11 @@ const Lista = styled.ul`
     flex-wrap: wrap;
     gap:3rem;
     margin:0;
+
+    @media (max-width: 480px) {
+        gap:10px;
+        padding:0;
+    }
 `
 
 function ProductListing({products, width, padding}){
