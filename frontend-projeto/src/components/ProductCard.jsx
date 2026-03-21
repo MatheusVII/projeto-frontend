@@ -1,12 +1,15 @@
 import styled from "styled-components";
+import { useNavigate } from 'react-router-dom';
 
-const Card = styled.a`
+
+const Card = styled.div`
     width: calc(${props => props.$width || "25%"} - 3rem);
     padding:1rem;
     border-radius: 5px;
     text-decoration: none;
     transition: all 200ms ease;
     border:solid 2px var(--background);
+    cursor: pointer;
 
     &:hover{
       transform: translateY(-10px);
@@ -94,22 +97,26 @@ const Price = styled.div`
 
 function ProductCard({ image, price, name, priceDiscount, width, index}) {
 
+  const navigate = useNavigate();
+
   const formattedPrice = new Intl.NumberFormat('pt-BR', {
     style: 'currency',
     currency: 'BRL',
   }).format(price);
 
-    const formattedDiscount = priceDiscount
+  const formattedDiscount = priceDiscount
     ? new Intl.NumberFormat('pt-BR', {
         style: 'currency',
         currency: 'BRL',
-        }).format(Number(priceDiscount))
+      }).format(Number(priceDiscount))
     : null;
-    
 
+  function view(index){
+    navigate(`/produto/${index}`);
+  }
 
   return (
-    <Card $width={width} href={"produto/" + index}>
+    <Card $width={width} onClick={() => view(index)}>
       <Image>
         <img src={image} alt={name} />
       </Image>
@@ -121,7 +128,7 @@ function ProductCard({ image, price, name, priceDiscount, width, index}) {
       <Price>
         <h2 className="preco">{formattedPrice}</h2>
         {formattedDiscount && (
-            <h2 className="desconto"><s>{formattedDiscount || ""}</s></h2>
+          <h2 className="desconto"><s>{formattedDiscount}</s></h2>
         )}
       </Price>
     </Card>
