@@ -33,8 +33,8 @@ function ProductViewPage() {
                 <Images>
                     <Galery width={"75%"}radius="4px" showthumbs={true} images={
                         [
-                            {"src": "../../public/produc-image-1.jpeg"},
-                            {"src": "../../public/produc-image-2.jpeg"}
+                            {"src": "/produc-image-1.jpeg"},
+                            {"src": "/produc-image-2.jpeg"}
                         ]
                     }/>
                 </Images>
