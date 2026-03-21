@@ -234,7 +234,7 @@ function ProductListingPage(){
                     </select>
                 </div>
                 <MobileFilter>
-                    <button><img src={FiltroPng} alt="" onClick={() => {filterOpen === false ? setFilterOpen(true) : setFilterOpen(false)}}/></button>
+                    <button onClick={() => {filterOpen === false ? setFilterOpen(true) : setFilterOpen(false)}}><img src={FiltroPng} alt=""/></button>
                 </MobileFilter>
             </PriceFilter>
             <Produtos>
