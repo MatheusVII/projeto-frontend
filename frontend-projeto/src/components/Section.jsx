@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 const Section2 = styled.section`
     width:100%;
@@ -61,7 +62,7 @@ function Section({title, titlePosition, link, children}){
             <div className="header">
                 <h2 className={titlePosition || "left"}>{title}</h2>
                 {link && (
-                    <a href={link.href || ""}>{link.text || ""}</a>
+                    <Link to={link.href || ""}>{link.text || ""}</Link>
                 )}
             </div>
             <Lista>
