@@ -41,7 +41,7 @@ const PriceFilter = styled.div`
     display: flex;
     padding: 0 10rem;
     margin-bottom: 2rem;
-    justify-content: flex-start;
+    justify-content: flex-end;
     gap: 1rem;
     align-items: flex-end;
 

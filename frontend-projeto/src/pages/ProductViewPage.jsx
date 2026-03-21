@@ -45,13 +45,13 @@ function ProductViewPage() {
                       [
                         {
                             name: "Tenis original da nike",
-                            image: "../public/product-thumb-1.jpeg",
+                            image: "/product-thumb-1.jpeg",
                             price: 200,
                             priceDiscount: 149.9
                         },
                         {
                             name: "Tenis do mike tyson",
-                            image: "../public/product-thumb-2.jpeg",
+                            image: "/product-thumb-2.jpeg",
                             price: 49.9
                         }
                     ]
