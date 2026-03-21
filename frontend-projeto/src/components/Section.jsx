@@ -14,6 +14,10 @@ const Section2 = styled.section`
             width:100%;
             color:var(--dark-gray-2);
             font-size:24px;
+
+            @media (max-width: 480px) {
+                font-size: 18px;
+            }
         }
 
         & .center{
@@ -30,7 +34,11 @@ const Section2 = styled.section`
             font-size:18px;
             position:absolute;
             right:0;
-            top:22px;
+            top:29%;
+
+            @media (max-width: 480px) {
+                font-size: 16px;
+            }
         }
     }
 

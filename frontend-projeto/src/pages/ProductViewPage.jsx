@@ -10,10 +10,20 @@ const View = styled.section`
     display: flex;
     background: var(--light-gray-3);
     padding: 2rem 3rem;
+
+    @media (max-width: 480px) {
+        flex-direction: column;
+        padding: 10px;
+        gap: 2rem;
+    }
 `
 
 const Images = styled.div`
     width: 50%;
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
 `
 
 function ProductViewPage() {

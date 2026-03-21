@@ -9,7 +9,7 @@ const ImagesGalery = styled.section`
     margin:auto;
 
     @media (max-width: 480px) {
-        width:90%;
+        width:100%;
     }
 `
 
@@ -46,7 +46,7 @@ const PreviosButton = styled.button`
     background:none;
     border:none;
     left: 10px;
-    z-index:9998;
+    z-index:9997;
 
     &:disabled{
         opacity: 0.3;
@@ -83,6 +83,11 @@ const Thumbnails = styled.div`
         &.active{       
             border: 2px solid var(--primary);
         }   
+
+        @media (max-width: 480px) {
+            width: 60px;
+            height: 60px;
+        }
     }
 `
 function Galery({width, height, radius, showthumbs = false, images}){

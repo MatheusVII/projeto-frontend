@@ -6,12 +6,16 @@ import ProductOptions from "./ProductOptions";
 const BuyBoxSection = styled.section`
     width: 50%;
     height: auto;
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
 `
 
 
 const Name = styled.div`
     width:100%;
-    font-size: 32px;
+    font-size: 20px;
     color: var(--dark-gray);
 
     & h2{
@@ -133,6 +137,11 @@ const Button = styled.div`
 
         &:hover{
             background: var(--warning-hover);
+        }
+
+        @media (max-width: 480px) {
+            width: 100%;
+            margin-top: 1rem;
         }
     }
 `
